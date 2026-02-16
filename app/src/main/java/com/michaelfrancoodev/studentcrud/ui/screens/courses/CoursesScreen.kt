@@ -17,19 +17,16 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.pulltorefresh.PullToRefreshContainer
-import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
+import com.michaelfrancoodev.studentcrud.data.local.entity.ClassSchedule
+import com.michaelfrancoodev.studentcrud.data.local.entity.Course
 import com.michaelfrancoodev.studentcrud.ui.components.EmptyCoursesState
 import com.michaelfrancoodev.studentcrud.ui.components.ErrorState
 import com.michaelfrancoodev.studentcrud.ui.components.LoadingState
@@ -50,22 +47,7 @@ fun CoursesScreen(
     onNavigateToAddCourse: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val pullToRefreshState = rememberPullToRefreshState()
     var showAddDialog by remember { mutableStateOf(false) }
-
-    // Handle pull to refresh
-    if (pullToRefreshState.isRefreshing) {
-        LaunchedEffect(true) {
-            viewModel.refresh()
-        }
-    }
-
-    // Reset refresh state when loading completes
-    LaunchedEffect(uiState) {
-        if (uiState !is CourseUiState.Loading) {
-            pullToRefreshState.endRefresh()
-        }
-    }
 
     Scaffold(
         topBar = {
@@ -94,7 +76,6 @@ fun CoursesScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .nestedScroll(pullToRefreshState.nestedScrollConnection)
         ) {
             when (val state = uiState) {
                 is CourseUiState.Loading -> {
@@ -119,17 +100,10 @@ fun CoursesScreen(
 
                 is CourseUiState.Error -> {
                     ErrorState(
-                        message = state.message,
-                        onRetry = { viewModel.refresh() }
+                        message = state.message
                     )
                 }
             }
-
-            // Pull to refresh indicator
-            PullToRefreshContainer(
-                state = pullToRefreshState,
-                modifier = Modifier.align(Alignment.TopCenter)
-            )
         }
     }
 
@@ -137,7 +111,7 @@ fun CoursesScreen(
     if (showAddDialog) {
         AddCourseDialog(
             onDismiss = { showAddDialog = false },
-            onSave = { course, schedules ->
+            onSave = { course: Course, schedules: List<ClassSchedule> ->
                 viewModel.saveCourse(course, schedules)
                 showAddDialog = false
             }
