@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Theme for Soma Smart app
+        Material 3 theming is handled in Compose (Theme.kt)
+        This is just the base theme for the Activity
+    -->
+    <style name="Theme.SomaSmart" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Splash screen background -->
+        <item name="android:windowBackground">@color/purple_500</item>
+    </style>
+</resources>

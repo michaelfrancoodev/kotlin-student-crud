@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Soma Smart</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_courses">Courses</string>
+    <string name="nav_tasks">Tasks</string>
+    <string name="nav_timetable">Timetable</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Home Screen -->
+    <string name="home_welcome">Welcome back!</string>
+    <string name="home_stats_courses">Courses</string>
+    <string name="home_stats_tasks">Tasks</string>
+    <string name="home_stats_classes">Classes</string>
+    <string name="home_today_classes">Today\'s Classes</string>
+    <string name="home_tomorrow_classes">Tomorrow\'s Classes</string>
+    <string name="home_pending_tasks">Pending Tasks</string>
+    <string name="home_no_classes_today">No classes today</string>
+    <string name="home_no_tasks">No pending tasks</string>
+    
+    <!-- Courses Screen -->
+    <string name="courses_title">My Courses</string>
+    <string name="courses_add">Add Course</string>
+    <string name="courses_empty_title">No courses yet</string>
+    <string name="courses_empty_message">Add your first course to get started</string>
+    <string name="courses_overview">Course Overview</string>
+    <string name="courses_total">Total Courses</string>
+    <string name="courses_credits">Credits</string>
+    <string name="courses_semester">Semester</string>
+    
+    <!-- Course Details -->
+    <string name="course_name">Course Name</string>
+    <string name="course_code">Course Code</string>
+    <string name="course_instructor">Instructor</string>
+    <string name="course_room">Room</string>
+    <string name="course_description">Description</string>
+    <string name="course_schedules">Class Schedules</string>
+    
+    <!-- Tasks Screen -->
+    <string name="tasks_title">Tasks</string>
+    <string name="tasks_add">Add Task</string>
+    <string name="tasks_empty_title">No tasks yet</string>
+    <string name="tasks_empty_message">Add assignments and deadlines</string>
+    <string name="tasks_pending">Pending</string>
+    <string name="tasks_completed">Completed</string>
+    <string name="tasks_overdue">Overdue</string>
+    
+    <!-- Task Details -->
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Description</string>
+    <string name="task_due_date">Due Date</string>
+    <string name="task_priority">Priority</string>
+    <string name="task_priority_low">Low</string>
+    <string name="task_priority_medium">Medium</string>
+    <string name="task_priority_high">High</string>
+    <string name="task_status">Status</string>
+    <string name="task_course">Course</string>
+    
+    <!-- Timetable Screen -->
+    <string name="timetable_title">Timetable</string>
+    <string name="timetable_empty_title">No classes scheduled</string>
+    <string name="timetable_empty_message">Add courses with schedules</string>
+    <string name="timetable_week">Week</string>
+    <string name="timetable_today">Today</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_edit">Edit Profile</string>
+    <string name="profile_settings">Settings</string>
+    <string name="profile_student_name">Student Name</string>
+    <string name="profile_student_id">Student ID</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_phone">Phone</string>
+    <string name="profile_theme">Theme</string>
+    <string name="profile_language">Language</string>
+    <string name="profile_notifications">Notifications</string>
+    <string name="profile_about">About</string>
+    
+    <!-- Days of Week -->
+    <string name="day_monday">Monday</string>
+    <string name="day_tuesday">Tuesday</string>
+    <string name="day_wednesday">Wednesday</string>
+    <string name="day_thursday">Thursday</string>
+    <string name="day_friday">Friday</string>
+    <string name="day_saturday">Saturday</string>
+    <string name="day_sunday">Sunday</string>
+    
+    <!-- Common Actions -->
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_close">Close</string>
+    
+    <!-- Messages -->
+    <string name="message_loading">Loading…</string>
+    <string name="message_error">Something went wrong</string>
+    <string name="message_no_data">No data available</string>
+    <string name="message_saved">Saved successfully</string>
+    <string name="message_deleted">Deleted successfully</string>
+    <string name="message_confirm_delete">Are you sure you want to delete?</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_back">Back</string>
+    <string name="cd_menu">Menu</string>
+    <string name="cd_more">More options</string>
+    <string name="cd_add">Add</string>
+    <string name="cd_search">Search</string>
+    <string name="cd_filter">Filter</string>
+</resources>
